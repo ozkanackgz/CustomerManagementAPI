@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "BEMNusG2ZYkJTbFV/MCaHFD/4WEEULhicavmDPedcPE=",
+  "Source": "CustomerManagementAPI",
+  "BasePath": "_content/CustomerManagementAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
