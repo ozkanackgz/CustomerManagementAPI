@@ -2,24 +2,34 @@ Proje C# tabanlı ASP.NET Core Web API kullanılarak geliştirilmiş müşteri y
 C# ile Entity Framework Core kullanarak SQL Server bağlantısı sağlamak ve veri işlemlerini gerçekleştirmek üzere veri tabanı oluşturulmuştur.
 
 
+
 Projenin Çalıştırılması :
 
 1-Dosyayı zip olarak indirin
 
+
 2-Visual Studio üzerinden projeyi açın
+
 
 3-appsettings.json dosyası üzerinden veri tabanı bağlantınızı kontrol edin, kendi bilgisayarınıza uygun yapılandırmaları sağlayabilirsiniz
 
+
 4-Microsoft.EntityFrameWorkCore ve Microsoft.EntityFrameWorkCore.SqlServer paketlerinin yüklü olduğundan emin olun
+
 
 5-Microsoft.AspNetCore.AuthenticationJwtBearer ve System.IdentityModel.TokensJwt paketlerinin yüklü olduğundan emin olun
 
+
 6-Programı Çalıştırın
+
+
+
 
 
 Projenin Oluşturulma Aşamaları :
 
 1-Visual Studio aracı ile ASP.NET Core Web API olarak proje şablonu belirlendi
+
 
 2-Projenin adını (CustomerManagementAPI) ve konumunu belirledikten sonra proje yapılandırılması sağlandı
 
@@ -27,13 +37,18 @@ Projenin Oluşturulma Aşamaları :
 
     --> Enable OpenAPI Support Kutucuğu İşaretli - Swagger dökümantasyonu için
 
+
 3-Müşteri modelini oluşturmak amacıyla Solution Explorer da "Model" klasörü oluşturuldu ve "Customer.cs" sınıfı eklemek üzere müşteri özellikleri burada kodlandı
+
 
 4-Veri tabanı bağlantısı amacıyla Solution Explorer da "Data" klasörü oluşturuldu ve "AppDBContext.cs" sınıfı eklendi ve gerekli kodlar yazıldı
 
+
 5-SQL Server bağlantısı yapılandırmak amacıyla "appsettings.json" dosyasına bağlantı metni eklendi ve LocalDB kullanılarak SQL Server a erişildi
 
+
 6-"AppDbContext" için bağlılık enjeksiyonu eklendi
+
 
 7-Veri tabanı oluşturmak ve Customers tablosunu eklemek amacıyla Package Manager Console ile;
 
@@ -49,9 +64,11 @@ Projenin Oluşturulma Aşamaları :
   Komutu ile hata çözüldü ve gerekli yapılandırma sağlandı
 
 
+
 8- -Model Class- olarak "Customer" ve -Data Context Class- olarak "AppDBContext" olmak üzere bir CustomerController oluşturuldu ve;
        
       Visual Studio, CRUD işlemleri için temel endpointler içeren bir sınıf oluşturdu
+
 
 9-Proje ilk defa çalıştırıldı ve https://localhost:7226/swagger gizlilik hatası alınarak erişim sağlanamadı
 
@@ -60,6 +77,7 @@ Projenin Oluşturulma Aşamaları :
       dotnet dex-certs https --trust
 
   Komutu çalıştırılarak geliştirme ortamında kullanılan güvenlik sertifikası güvenilir olarak işaretlendi ve erişim sağlandı
+
 
 
 10-JWT Rol Bazlı Yetkilendirme ve Test aşamalarına geçmeden önce projenin genel değerlendirmesi yapıldı ve;
@@ -71,6 +89,7 @@ Projenin Oluşturulma Aşamaları :
    DELETE api/Customers/{id}
 
    EndPoint leri test edildi ve uygulmanın çalıştığı görüldü
+
 
 
 11-JWT Rol Bazlı Yetkilendirme;
@@ -90,6 +109,7 @@ Projenin Oluşturulma Aşamaları :
        User Get işlemi yapabilir
 
 
+
 12-Test;
 
    --> Login işlemi yapılmadan hiçbir CRUD işleminin yapılamaması sağlandı ve test edildi (Başarılı)
@@ -97,6 +117,7 @@ Projenin Oluşturulma Aşamaları :
    --> Admin veya User olarak token alma işlemleri sağlandı ve test edildi (Başarılı)
 
    --> Tokenler ile Authorize üzerinde giriş işlemleri yapıldı ve erişim yetkileri test edildi (Başarısız)
+
 
 
 13-Problem;
