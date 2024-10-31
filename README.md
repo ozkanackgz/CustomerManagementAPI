@@ -83,10 +83,15 @@ Projenin Oluşturulma Aşamaları :
 10-JWT Rol Bazlı Yetkilendirme ve Test aşamalarına geçmeden önce projenin genel değerlendirmesi yapıldı ve;
 
    GET api/Customers
+   
    POST api/Customers
+   
    GET api/Customers/{id}
+   
    PUT api/Customers/{id}
+   
    DELETE api/Customers/{id}
+   
 
    EndPoint leri test edildi ve uygulmanın çalıştığı görüldü
 
